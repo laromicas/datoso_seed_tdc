@@ -1,6 +1,6 @@
 ![Datoso](https://github.com/laromicas/datoso/blob/master/bearlogo.png)
 
-# Datoso Seed Tdc
+# Datoso Seed TDC
 
 Datoso is a WIP Python command line tool to download and organize your Dat Roms.
 As today the tool supports dat-omatic, redump, and translated-english dats.
@@ -16,7 +16,7 @@ Datoso requires python 3.10+.
 Use pip (recommended to use a virtual environment):
 
 ``` bash
-# Install datoso base (doesn't do much without real plugins)
+# Install datoso TDC
 pip install datoso_seed_tdc
 
 ```
@@ -25,18 +25,6 @@ pip install datoso_seed_tdc
 
 Check [Datoso](https://github.com/laromicas/datoso) for usage.
 
-
-## Developing a seed
-
-Clone this repository and execute init.sh
-``` bash
-$ git clone https://github.com/laromicas/datoso_seed_tdc
-
-$ cd datoso_seed_tdc
-$ ./init.sh [new_name]   #e.g. ./init.sh newnointro
-
-```
-This creates a new folder with the name `datoso_seed_newnointro` with a scaffold to begin.
 
 ## TODO
 
