@@ -10,10 +10,10 @@ rules = [
             {
                 'key': 'Homepage',
                 'operator': 'contains',
-                'value': 'totaldoscollection'
-            }
-        ]
-    }
+                'value': 'totaldoscollection',
+            },
+        ],
+    },
 ]
 
 def get_rules():
