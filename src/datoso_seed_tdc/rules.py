@@ -8,7 +8,7 @@ rules = [
         'priority': 0,
         'rules': [
             {
-                'key': 'Homepage',
+                'key': 'homepage',
                 'operator': 'contains',
                 'value': 'totaldoscollection',
             },

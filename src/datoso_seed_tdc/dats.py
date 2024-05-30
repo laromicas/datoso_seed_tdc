@@ -1,4 +1,4 @@
-from datoso.repositories.dat import DOSCenterDatFile
+from datoso.repositories.dat_file import DOSCenterDatFile
 
 
 class TdcDat(DOSCenterDatFile):
