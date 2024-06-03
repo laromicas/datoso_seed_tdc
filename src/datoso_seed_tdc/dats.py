@@ -1,7 +1,10 @@
+"""TDC Dat class."""
 from datoso.repositories.dat_file import DOSCenterDatFile
 
 
 class TdcDat(DOSCenterDatFile):
+    """TDC Dat class."""
+
     seed: str = 'tdc'
 
     def initial_parse(self) -> list:
