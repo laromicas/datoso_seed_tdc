@@ -11,7 +11,7 @@ Total DOS Collection (TDC) is a project to collect and preserve all DOS games ev
 
 ## Installation
 
-Datoso requires python 3.10+.
+Datoso requires python 3.11+.
 
 Use pip (recommended to use a virtual environment):
 

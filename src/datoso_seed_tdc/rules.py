@@ -1,3 +1,4 @@
+"""Rules for the TDC seed."""
 from datoso_seed_tdc.dats import TdcDat
 
 rules = [
@@ -8,13 +9,14 @@ rules = [
         'priority': 0,
         'rules': [
             {
-                'key': 'Homepage',
+                'key': 'homepage',
                 'operator': 'contains',
-                'value': 'totaldoscollection'
-            }
-        ]
-    }
+                'value': 'totaldoscollection',
+            },
+        ],
+    },
 ]
 
-def get_rules():
+def get_rules() -> list:
+    """Get the rules."""
     return rules
