@@ -6,8 +6,9 @@ from pathlib import Path
 from dateutil import tz
 
 from datoso.configuration.folder_helper import Folders
-from datoso.helpers import FileUtils, show_progress
+from datoso.helpers import show_progress
 from datoso.helpers.download import downloader
+from datoso.helpers.file_utils import move_path
 from datoso_seed_tdc import __prefix__
 
 
@@ -23,7 +24,7 @@ def download_dats(folder_helper: Folders) -> None:
         zip_ref.extractall(folder_helper.dats)
     backup_daily_name = f'tdc-{datetime.now(tz.tzlocal()).strftime("%Y-%m-%d")}.zip'
 
-    FileUtils.move(local_filename, Path(folder_helper.backup)  / backup_daily_name)
+    move_path(local_filename, Path(folder_helper.backup)  / backup_daily_name)
 
 def fetch() -> None:
     """Fetch and download DAT files."""
