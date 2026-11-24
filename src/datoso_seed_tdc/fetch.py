@@ -6,8 +6,7 @@ from pathlib import Path
 from dateutil import tz
 
 from datoso.configuration.folder_helper import Folders
-from datoso.helpers import show_progress
-from datoso.helpers.download import downloader
+from datoso.helpers.download import DownloadProgress, downloader
 from datoso.helpers.file_utils import move_path
 from datoso_seed_tdc import __prefix__
 
@@ -18,7 +17,8 @@ def download_dats(folder_helper: Folders) -> None:
     filename = Path(href).name
     local_filename = folder_helper.dats / filename
     print(f'Downloading {filename}')
-    downloader(url=href, destination=local_filename, reporthook=show_progress)
+    with DownloadProgress() as progress:
+        downloader(url=href, destination=local_filename, progress=progress)
 
     with zipfile.ZipFile(local_filename, 'r') as zip_ref:
         zip_ref.extractall(folder_helper.dats)
